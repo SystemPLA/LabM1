@@ -1,4 +1,4 @@
-package ry.systempla.lab_m_1;
+package ru.systempla.lab_m_1;
 
 import android.content.Context;
 
