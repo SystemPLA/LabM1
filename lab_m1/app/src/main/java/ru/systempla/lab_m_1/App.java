@@ -2,6 +2,8 @@ package ru.systempla.lab_m_1;
 
 import android.app.Application;
 
+import ru.systempla.lab_m_1.di.AppComponent;
+
 public class App extends Application {
     static private App instance;
 
