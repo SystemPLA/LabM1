@@ -3,7 +3,8 @@ package ru.systempla.lab_m_1.di;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import ru.systempla.lab_m_1.MainActivity;
+import ru.systempla.lab_m_1.mvp.presenter.MainActivityPresenter;
+import ru.systempla.lab_m_1.mvp.view.MainActivity;
 import ru.systempla.lab_m_1.di.modules.AppModule;
 
 @Singleton
@@ -12,4 +13,5 @@ import ru.systempla.lab_m_1.di.modules.AppModule;
 })
 public interface AppComponent {
     void inject(MainActivity mainActivity);
+    void inject(MainActivityPresenter mainActivityPresenter);
 }
