@@ -2,6 +2,7 @@ package ru.systempla.lab_m_1.mvp.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -21,6 +22,7 @@ import moxy.viewstate.MvpViewState;
 import ru.systempla.lab_m_1.App;
 import ru.systempla.lab_m_1.R;
 import ru.systempla.lab_m_1.mvp.presenter.MainActivityPresenter;
+import ru.systempla.lab_m_1.navigation.Screens;
 import ru.terrakok.cicerone.Navigator;
 import ru.terrakok.cicerone.NavigatorHolder;
 import ru.terrakok.cicerone.Router;
@@ -28,11 +30,15 @@ import ru.terrakok.cicerone.android.support.SupportAppNavigator;
 
 public class MainActivity extends MvpAppCompatActivity implements MainView, BottomNavigationView.OnNavigationItemSelectedListener {
 
-    @Inject
-    Router router;
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     @BindView(R.id.navigation)
     BottomNavigationView bottomNavigationView;
+    
+    @Inject
+    Router router;
 
     @Inject
     NavigatorHolder navigatorHolder;

@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import moxy.InjectViewState;
 import moxy.MvpPresenter;
 import ru.systempla.lab_m_1.mvp.view.MainView;
+import ru.systempla.lab_m_1.navigation.Screens;
 import ru.terrakok.cicerone.Router;
 
 @InjectViewState

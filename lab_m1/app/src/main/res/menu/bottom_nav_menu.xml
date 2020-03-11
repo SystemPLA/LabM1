@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_charts"
+        android:icon="@drawable/ic_chart_foreground"
+        android:title="@string/charts_bottom_label"/>
+
+    <item
+        android:id="@+id/navigation_portfolio"
+        android:icon="@drawable/ic_portfolio_foreground"
+        android:title="@string/portfolio_bottom_label"/>
+
+    <item
+        android:id="@+id/navigation_markets"
+        android:icon="@drawable/ic_market_foreground"
+        android:title="@string/market_data_bottom_label"/>
+
+</menu>

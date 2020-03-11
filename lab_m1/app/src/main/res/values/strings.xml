@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">lab_m_1</string>
+    <string name="charts_bottom_label">Charts</string>
+    <string name="portfolio_bottom_label">Portfolio</string>
+    <string name="market_data_bottom_label">Market Data</string>
 </resources>
