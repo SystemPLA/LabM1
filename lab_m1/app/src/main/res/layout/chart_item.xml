@@ -44,21 +44,42 @@
                 app:layout_constraintTop_toBottomOf="@+id/item_pair_value"
                 card_view:text="Binance" />
 
-
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_pair_value"
+                android:background="?android:attr/listDivider" />
 
             <TextView
                 android:id="@+id/item_cur_price_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="12dp"
                 android:textAlignment="center"
                 android:textColor="@color/colorTextMain"
                 android:textSize="13sp"
-
-                app:layout_constraintStart_toEndOf="@+id/item_pair_value"
+                app:layout_constraintStart_toEndOf="@+id/divider1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 card_view:text="7124.45" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_cur_price_value"
+                app:layout_constraintEnd_toStartOf="@+id/item_1d_value"
+                android:background="?android:attr/listDivider" />
 
             <TextView
                 android:id="@+id/item_1d_value"
@@ -88,6 +109,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/item_1d_value"
                 card_view:text="3.14%" />
 
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_1d_value"
+                app:layout_constraintEnd_toStartOf="@+id/item_7d_value"
+                android:background="?android:attr/listDivider" />
+
             <TextView
                 android:id="@+id/item_7d_value"
                 android:layout_width="wrap_content"
@@ -115,6 +148,18 @@
                 app:layout_constraintStart_toEndOf="@+id/item_1d_value"
                 app:layout_constraintTop_toBottomOf="@+id/item_7d_value"
                 card_view:text="-8.56%" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/item_7d_value"
+                app:layout_constraintEnd_toStartOf="@+id/item_30d_value"
+                android:background="?android:attr/listDivider" />
 
             <TextView
                 android:id="@+id/item_30d_value"
