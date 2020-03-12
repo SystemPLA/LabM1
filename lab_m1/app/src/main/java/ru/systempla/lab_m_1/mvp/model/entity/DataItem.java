@@ -13,19 +13,19 @@ public class DataItem {
     @Expose
     private String exchange;
     @Expose
-    private Integer currentPrice;
+    private float currentPrice;
     @Expose
-    private Integer _1DABS;
+    private float _1DABS;
     @Expose
-    private Integer _7DABS;
+    private float _7DABS;
     @Expose
-    private Integer _30DABS;
+    private float _30DABS;
     @Expose
-    private Integer _1DPROC;
+    private float _1DPROC;
     @Expose
-    private Integer _7DPROC;
+    private float _7DPROC;
     @Expose
-    private Integer _30DPROC;
+    private float _30DPROC;
 
     public Integer getId() {
         return id;
@@ -43,31 +43,31 @@ public class DataItem {
         return exchange;
     }
 
-    public Integer getCurrentPrice() {
+    public float getCurrentPrice() {
         return currentPrice;
     }
 
-    public Integer get_1DABS() {
+    public float get_1DABS() {
         return _1DABS;
     }
 
-    public Integer get_7DABS() {
+    public float get_7DABS() {
         return _7DABS;
     }
 
-    public Integer get_30DABS() {
+    public float get_30DABS() {
         return _30DABS;
     }
 
-    public Integer get_1DPROC() {
+    public float get_1DPROC() {
         return _1DPROC;
     }
 
-    public Integer get_7DPROC() {
+    public float get_7DPROC() {
         return _7DPROC;
     }
 
-    public Integer get_30DPROC() {
+    public float get_30DPROC() {
         return _30DPROC;
     }
 }

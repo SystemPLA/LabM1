@@ -28,14 +28,16 @@ import moxy.presenter.ProvidePresenter;
 import ru.systempla.lab_m_1.App;
 import ru.systempla.lab_m_1.R;
 import ru.systempla.lab_m_1.mvp.presenter.ChartsPresenter;
+import ru.systempla.lab_m_1.mvp.view.ChartsView;
+import ru.systempla.lab_m_1.mvp.view.adapter.ChartRVAdapter;
 
-public class ChartsFragment extends MvpAppCompatFragment {
+public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
 
     public static ChartsFragment newInstance(){
         return new ChartsFragment();
     }
 
-    private ChartsRVAdapter adapter;
+    private ChartRVAdapter adapter;
     private Unbinder unbinder;
 
     @InjectPresenter
@@ -81,22 +83,22 @@ public class ChartsFragment extends MvpAppCompatFragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-        getActivity().getMenuInflater().inflate(R.menu.warehouse_creation_menu, menu);
+//        getActivity().getMenuInflater().inflate(R.menu.warehouse_creation_menu, menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId()==R.id.create_item) {
-            presenter.onCreateMenuPressed();
-            return true;
-        }
-        return false;
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (item.getItemId()==R.id.create_item) {
+//            presenter.onCreateMenuPressed();
+//            return true;
+//        }
+//        return false;
+//    }
 
     @Override
     public void init() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new ChartsRVAdapter(presenter.getChartsListPresenter());
+        adapter = new ChartRVAdapter(presenter.getChartListPresenter());
         recyclerView.setAdapter(adapter);
     }
 
@@ -124,12 +126,9 @@ public class ChartsFragment extends MvpAppCompatFragment {
     public void inflateSubmenu(int position) {
         PopupMenu popupMenu = new PopupMenu(this.getContext(), recyclerView.getLayoutManager().findViewByPosition(position),
                 Gravity.RELATIVE_LAYOUT_DIRECTION);
-        popupMenu.inflate(R.menu.warehouse_item_menu);
+        popupMenu.inflate(R.menu.chart_item_menu);
         popupMenu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
-                case R.id.show_item:
-                    presenter.onShowMenuPressed(position);
-                    return true;
                 case R.id.change_item:
                     presenter.onChangeMenuPressed(position);
                     return true;

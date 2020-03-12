@@ -9,4 +9,7 @@
     <string name="_7d_change_table_label">7D change</string>
     <string name="_1d_change_table_label">1D change</string>
     <string name="cur_price_table_label">Cur.price</string>
+    <string name="percent">%</string>
+    <string name="edit_item">Edit</string>
+    <string name="delete_item">Delete</string>
 </resources>

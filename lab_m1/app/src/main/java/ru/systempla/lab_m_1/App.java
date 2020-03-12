@@ -3,6 +3,7 @@ package ru.systempla.lab_m_1;
 import android.app.Application;
 
 import ru.systempla.lab_m_1.di.AppComponent;
+import ru.systempla.lab_m_1.di.DaggerAppComponent;
 import ru.systempla.lab_m_1.di.modules.AppModule;
 
 public class App extends Application {

@@ -13,4 +13,7 @@
 
     <color name="colorIconSelected">#FFFFFF</color>
     <color name="colorIconNotSelected">#95CBF7</color>
+
+    <color name="colorNegativeValue">#FFBD0D0D</color>
+    <color name="colorPositiveValue">#FF2F7E04</color>
 </resources>
