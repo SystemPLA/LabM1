@@ -24,10 +24,10 @@
                 android:id="@+id/item_pair_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:textColor="@color/colorTextMain"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/divider1"
                 app:layout_constraintTop_toTopOf="parent"
                 card_view:text="BTC USD" />
 
@@ -35,12 +35,12 @@
                 android:id="@+id/item_exchange_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="16dp"
                 android:textColor="@color/colorTextMain"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/divider1"
                 app:layout_constraintTop_toBottomOf="@+id/item_pair_value"
                 card_view:text="Binance" />
 
@@ -48,23 +48,23 @@
                 android:id="@+id/divider1"
                 android:layout_width="1dp"
                 android:layout_height="0dp"
-                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/item_pair_value"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/divider2"
                 android:background="?android:attr/listDivider" />
 
             <TextView
                 android:id="@+id/item_cur_price_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
                 android:textAlignment="center"
                 android:textColor="@color/colorTextMain"
                 android:textSize="13sp"
                 app:layout_constraintStart_toEndOf="@+id/divider1"
+                app:layout_constraintEnd_toStartOf="@+id/divider2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 card_view:text="7124.45" />
@@ -77,8 +77,8 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/item_cur_price_value"
-                app:layout_constraintEnd_toStartOf="@+id/item_1d_value"
+                app:layout_constraintStart_toEndOf="@+id/divider1"
+                app:layout_constraintEnd_toStartOf="@+id/divider3"
                 android:background="?android:attr/listDivider" />
 
             <TextView
@@ -89,8 +89,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/colorTextMain"
                 android:textSize="13sp"
-                app:layout_constraintEnd_toStartOf="@+id/item_7d_value"
-                app:layout_constraintStart_toEndOf="@+id/item_cur_price_value"
+                app:layout_constraintStart_toEndOf="@+id/divider2"
+                app:layout_constraintEnd_toStartOf="@+id/divider3"
                 app:layout_constraintTop_toTopOf="parent"
                 card_view:text="123.45" />
 
@@ -104,8 +104,8 @@
                 android:textColor="@color/colorTextMain"
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/item_7d_percent"
-                app:layout_constraintStart_toEndOf="@+id/item_cur_price_value"
+                app:layout_constraintStart_toEndOf="@+id/divider2"
+                app:layout_constraintEnd_toStartOf="@+id/divider3"
                 app:layout_constraintTop_toBottomOf="@+id/item_1d_value"
                 card_view:text="3.14%" />
 
@@ -117,8 +117,8 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/item_1d_value"
-                app:layout_constraintEnd_toStartOf="@+id/item_7d_value"
+                app:layout_constraintStart_toEndOf="@+id/divider2"
+                app:layout_constraintEnd_toStartOf="@+id/divider4"
                 android:background="?android:attr/listDivider" />
 
             <TextView
@@ -129,8 +129,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/colorTextMain"
                 android:textSize="13sp"
-                app:layout_constraintEnd_toStartOf="@+id/item_30d_value"
-                app:layout_constraintStart_toEndOf="@+id/item_1d_value"
+                app:layout_constraintStart_toEndOf="@+id/divider3"
+                app:layout_constraintEnd_toStartOf="@+id/divider4"
                 app:layout_constraintTop_toTopOf="parent"
                 card_view:text="-321.01" />
 
@@ -144,8 +144,8 @@
                 android:textColor="@color/colorTextMain"
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/item_30d_percent"
-                app:layout_constraintStart_toEndOf="@+id/item_1d_value"
+                app:layout_constraintStart_toEndOf="@+id/divider3"
+                app:layout_constraintEnd_toStartOf="@+id/divider4"
                 app:layout_constraintTop_toBottomOf="@+id/item_7d_value"
                 card_view:text="-8.56%" />
 
@@ -157,8 +157,8 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/item_7d_value"
-                app:layout_constraintEnd_toStartOf="@+id/item_30d_value"
+                app:layout_constraintStart_toEndOf="@+id/divider3"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:background="?android:attr/listDivider" />
 
             <TextView
@@ -166,10 +166,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
                 android:textAlignment="center"
                 android:textColor="@color/colorTextMain"
                 android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@+id/divider4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 card_view:text="1234.45" />
@@ -179,15 +179,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:layout_marginEnd="24dp"
                 android:layout_marginBottom="16dp"
                 android:textAlignment="center"
                 android:textColor="@color/colorTextMain"
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/divider4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_30d_value"
                 card_view:text="14.56%" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </FrameLayout>

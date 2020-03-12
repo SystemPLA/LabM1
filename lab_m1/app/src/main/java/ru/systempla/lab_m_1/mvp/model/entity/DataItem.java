@@ -1,6 +1,7 @@
 package ru.systempla.lab_m_1.mvp.model.entity;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class DataItem {
 
@@ -12,18 +13,25 @@ public class DataItem {
     private String tsym;
     @Expose
     private String exchange;
+    @SerializedName("current_price")
     @Expose
     private float currentPrice;
+    @SerializedName("1DABS")
     @Expose
     private float _1DABS;
+    @SerializedName("7DABS")
     @Expose
     private float _7DABS;
+    @SerializedName("30DABS")
     @Expose
     private float _30DABS;
+    @SerializedName("1DPROC")
     @Expose
     private float _1DPROC;
+    @SerializedName("7DPROC")
     @Expose
     private float _7DPROC;
+    @SerializedName("30DPROC")
     @Expose
     private float _30DPROC;
 
