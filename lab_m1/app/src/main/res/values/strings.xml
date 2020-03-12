@@ -3,4 +3,10 @@
     <string name="charts_bottom_label">Charts</string>
     <string name="portfolio_bottom_label">Portfolio</string>
     <string name="market_data_bottom_label">Market Data</string>
+    <string name="pair_table_label">Pair</string>
+    <string name="exchange_table_label">Exchange</string>
+    <string name="_30d_change_table_label">30D change</string>
+    <string name="_7d_change_table_label">7D change</string>
+    <string name="_1d_change_table_label">1D change</string>
+    <string name="cur_price_table_label">Cur.price</string>
 </resources>

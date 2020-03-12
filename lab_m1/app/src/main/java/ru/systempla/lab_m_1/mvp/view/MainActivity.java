@@ -30,13 +30,12 @@ import ru.terrakok.cicerone.android.support.SupportAppNavigator;
 
 public class MainActivity extends MvpAppCompatActivity implements MainView, BottomNavigationView.OnNavigationItemSelectedListener {
 
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
     @BindView(R.id.navigation)
     BottomNavigationView bottomNavigationView;
-    
+
     @Inject
     Router router;
 
@@ -91,6 +90,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView, Bott
         switch (item.getItemId()) {
             case R.id.navigation_markets:
                 bottomNavigationView.getMenu().getItem(2).setChecked(true);
+                bottomNavigationView.setSelected(true);
                 presenter.navigateToMarkets();
                 break;
             case R.id.navigation_portfolio:
