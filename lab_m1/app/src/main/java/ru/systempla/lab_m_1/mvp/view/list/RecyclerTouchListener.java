@@ -3,8 +3,10 @@ package ru.systempla.lab_m_1.mvp.view.list;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Rect;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -87,13 +89,14 @@ public class RecyclerTouchListener implements RecyclerView.OnItemTouchListener, 
 
             if (!bgVisible && touchedPosition >= 0 && !unClickableRows.contains(touchedPosition) && !isRViewScrolling) {
                 if (longClickVibrate) {
-//                    Vibrator vibe = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
-//                    vibe.vibrate(100); // do we really need to add vibrate service
+                    Vibrator vibe = (Vibrator) act.getSystemService(Context.VIBRATOR_SERVICE);
+                    vibe.vibrate(100); // do we really need to add vibrate service
                 }
                 mRowLongClickListener.onRowLongClicked(touchedPosition);
             }
         }
     };
+
 
     public RecyclerTouchListener(Activity a, RecyclerView recyclerView) {
         this.act = a;

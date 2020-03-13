@@ -35,7 +35,6 @@ public class ChartRVAdapter extends RecyclerView.Adapter<ChartRVAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.pos = position;
         presenter.bind(holder);
-        RxView.longClicks(holder.itemView).map(o -> holder).subscribe(presenter.getClickSubject());
     }
 
     @Override

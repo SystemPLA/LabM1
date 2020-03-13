@@ -64,13 +64,13 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
         View view = inflater.inflate(R.layout.charts_fragment, container, false);
         unbinder = ButterKnife.bind(this, view);
         App.getInstance().getAppComponent().inject(this);
-        setHasOptionsMenu(true);
+//        setHasOptionsMenu(true);
         return view;
     }
 
     @Override
     public void onDestroyView() {
-        setHasOptionsMenu(false);
+//        setHasOptionsMenu(false);
         super.onDestroyView();
         unbinder.unbind();
     }
@@ -104,21 +104,20 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
         adapter = new ChartRVAdapter(presenter.getChartListPresenter());
         touchListener = new RecyclerTouchListener(getActivity(), recyclerView);
         touchListener
-                .setClickable(new RecyclerTouchListener.OnRowClickListener() {
+                .setLongClickable(true, new RecyclerTouchListener.OnRowLongClickListener() {
                     @Override
-                    public void onRowClicked(int position) {
-                    }
-
-                    @Override
-                    public void onIndependentViewClicked(int independentViewID, int position) {
+                    public void onRowLongClicked(int position) {
+                        presenter.inflateSubMenu(position);
                     }
                 })
                 .setSwipeOptionViews(R.id.delete_task,R.id.edit_task)
                 .setSwipeable(R.id.rowFG, R.id.rowBG, (viewID, position) -> {
                     switch (viewID){
                         case R.id.delete_task:
+                            presenter.onDeleteMenuPressed(position);
                             break;
                         case R.id.edit_task:
+                            presenter.onChangeMenuPressed(position);
                             break;
                     }
                 });

@@ -53,11 +53,6 @@ public class ChartsPresenter extends MvpPresenter<ChartsView> {
             return chartBlocks.size();
         }
 
-        @Override
-        public PublishSubject<ChartItemView> getClickSubject() {
-            return clickSubject;
-        }
-
 
     }
     public ChartsPresenter(Scheduler mainThreadScheduler, Scheduler ioThreadScheduler) {
@@ -74,11 +69,9 @@ public class ChartsPresenter extends MvpPresenter<ChartsView> {
     protected void onFirstViewAttach() {
         super.onFirstViewAttach();
         getViewState().init();
-
-        chartListPresenter.getClickSubject().subscribe(itemView -> inflateSubMenu(itemView.getPos()));
     }
 
-    private void inflateSubMenu(int position) {
+    public void inflateSubMenu(int position) {
         getViewState().inflateSubmenu(position);
     }
 
