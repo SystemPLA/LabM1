@@ -30,6 +30,7 @@ import ru.systempla.lab_m_1.R;
 import ru.systempla.lab_m_1.mvp.presenter.ChartsPresenter;
 import ru.systempla.lab_m_1.mvp.view.ChartsView;
 import ru.systempla.lab_m_1.mvp.view.adapter.ChartRVAdapter;
+import ru.systempla.lab_m_1.mvp.view.list.RecyclerTouchListener;
 
 public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
 
@@ -38,6 +39,7 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
     }
 
     private ChartRVAdapter adapter;
+    private RecyclerTouchListener touchListener;
     private Unbinder unbinder;
 
     @InjectPresenter
@@ -78,6 +80,7 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
         super.onResume();
         presenter.setTitle();
         presenter.loadChartsData();
+        recyclerView.addOnItemTouchListener(touchListener);
     }
 
     @Override
@@ -99,6 +102,26 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
     public void init() {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new ChartRVAdapter(presenter.getChartListPresenter());
+        touchListener = new RecyclerTouchListener(getActivity(), recyclerView);
+        touchListener
+                .setClickable(new RecyclerTouchListener.OnRowClickListener() {
+                    @Override
+                    public void onRowClicked(int position) {
+                    }
+
+                    @Override
+                    public void onIndependentViewClicked(int independentViewID, int position) {
+                    }
+                })
+                .setSwipeOptionViews(R.id.delete_task,R.id.edit_task)
+                .setSwipeable(R.id.rowFG, R.id.rowBG, (viewID, position) -> {
+                    switch (viewID){
+                        case R.id.delete_task:
+                            break;
+                        case R.id.edit_task:
+                            break;
+                    }
+                });
         recyclerView.setAdapter(adapter);
     }
 
