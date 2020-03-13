@@ -14,181 +14,263 @@
         android:layout_margin="1dp"
         card_view:cardCornerRadius="5dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/item_card"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/item_pair_value"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/rowFG"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/item_card"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColor="@color/colorTextMain"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/divider1"
-                app:layout_constraintTop_toTopOf="parent"
-                card_view:text="BTC USD" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/item_exchange_value"
+                <TextView
+                    android:id="@+id/item_pair_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorTextMain"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/divider1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    card_view:text="BTC USD" />
+
+                <TextView
+                    android:id="@+id/item_exchange_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@color/colorTextMain"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/divider1"
+                    app:layout_constraintTop_toBottomOf="@+id/item_pair_value"
+                    card_view:text="Binance" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/divider2"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/item_cur_price_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextMain"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@+id/divider1"
+                    app:layout_constraintEnd_toStartOf="@+id/divider2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    card_view:text="7124.45" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider1"
+                    app:layout_constraintEnd_toStartOf="@+id/divider3"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/item_1d_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextMain"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@+id/divider2"
+                    app:layout_constraintEnd_toStartOf="@+id/divider3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    card_view:text="123.45" />
+
+                <TextView
+                    android:id="@+id/item_1d_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextMain"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider2"
+                    app:layout_constraintEnd_toStartOf="@+id/divider3"
+                    app:layout_constraintTop_toBottomOf="@+id/item_1d_value"
+                    card_view:text="3.14%" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider2"
+                    app:layout_constraintEnd_toStartOf="@+id/divider4"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/item_7d_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextMain"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@+id/divider3"
+                    app:layout_constraintEnd_toStartOf="@+id/divider4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    card_view:text="-321.01" />
+
+                <TextView
+                    android:id="@+id/item_7d_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextMain"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider3"
+                    app:layout_constraintEnd_toStartOf="@+id/divider4"
+                    app:layout_constraintTop_toBottomOf="@+id/item_7d_value"
+                    card_view:text="-8.56%" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/item_30d_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextMain"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@+id/divider4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    card_view:text="1234.45" />
+
+                <TextView
+                    android:id="@+id/item_30d_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="16dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextMain"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_30d_value"
+                    card_view:text="14.56%" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rowBG"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp"
-                android:textColor="@color/colorTextMain"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/divider1"
-                app:layout_constraintTop_toBottomOf="@+id/item_pair_value"
-                card_view:text="Binance" />
+                android:layout_height="72dp"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:padding="10dp"
+                android:background="#d65819"
+                android:orientation="horizontal">
 
-            <View
-                android:id="@+id/divider1"
-                android:layout_width="1dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/divider2"
-                android:background="?android:attr/listDivider" />
+                <RelativeLayout
+                    android:id="@+id/edit_task"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/item_cur_price_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textColor="@color/colorTextMain"
-                android:textSize="13sp"
-                app:layout_constraintStart_toEndOf="@+id/divider1"
-                app:layout_constraintEnd_toStartOf="@+id/divider2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                card_view:text="7124.45" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="1dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/divider1"
-                app:layout_constraintEnd_toStartOf="@+id/divider3"
-                android:background="?android:attr/listDivider" />
+                        <ImageView
+                            android:id="@+id/img_edit"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_edit_black_24dp"
+                            android:tint="@android:color/white"/>
+                    </LinearLayout>
+                </RelativeLayout>
 
-            <TextView
-                android:id="@+id/item_1d_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorTextMain"
-                android:textSize="13sp"
-                app:layout_constraintStart_toEndOf="@+id/divider2"
-                app:layout_constraintEnd_toStartOf="@+id/divider3"
-                app:layout_constraintTop_toTopOf="parent"
-                card_view:text="123.45" />
+                <RelativeLayout
+                    android:id="@+id/delete_task"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/item_1d_percent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorTextMain"
-                android:textSize="13sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/divider2"
-                app:layout_constraintEnd_toStartOf="@+id/divider3"
-                app:layout_constraintTop_toBottomOf="@+id/item_1d_value"
-                card_view:text="3.14%" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-            <View
-                android:id="@+id/divider3"
-                android:layout_width="1dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/divider2"
-                app:layout_constraintEnd_toStartOf="@+id/divider4"
-                android:background="?android:attr/listDivider" />
+                        <ImageView
+                            android:id="@+id/img_delete"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_delete"
+                            android:tint="@android:color/white"/>
+                    </LinearLayout>
+                </RelativeLayout>
 
-            <TextView
-                android:id="@+id/item_7d_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorTextMain"
-                android:textSize="13sp"
-                app:layout_constraintStart_toEndOf="@+id/divider3"
-                app:layout_constraintEnd_toStartOf="@+id/divider4"
-                app:layout_constraintTop_toTopOf="parent"
-                card_view:text="-321.01" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/item_7d_percent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorTextMain"
-                android:textSize="13sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/divider3"
-                app:layout_constraintEnd_toStartOf="@+id/divider4"
-                app:layout_constraintTop_toBottomOf="@+id/item_7d_value"
-                card_view:text="-8.56%" />
-
-            <View
-                android:id="@+id/divider4"
-                android:layout_width="1dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/divider3"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="?android:attr/listDivider" />
-
-            <TextView
-                android:id="@+id/item_30d_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorTextMain"
-                android:textSize="13sp"
-                app:layout_constraintStart_toEndOf="@+id/divider4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                card_view:text="1234.45" />
-
-            <TextView
-                android:id="@+id/item_30d_percent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="16dp"
-                android:textAlignment="center"
-                android:textColor="@color/colorTextMain"
-                android:textSize="13sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/divider4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_30d_value"
-                card_view:text="14.56%" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </FrameLayout>
