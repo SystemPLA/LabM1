@@ -7,8 +7,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -64,13 +68,11 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
         View view = inflater.inflate(R.layout.charts_fragment, container, false);
         unbinder = ButterKnife.bind(this, view);
         App.getInstance().getAppComponent().inject(this);
-//        setHasOptionsMenu(true);
         return view;
     }
 
     @Override
     public void onDestroyView() {
-//        setHasOptionsMenu(false);
         super.onDestroyView();
         unbinder.unbind();
     }
@@ -86,17 +88,8 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-//        getActivity().getMenuInflater().inflate(R.menu.warehouse_creation_menu, menu);
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        if (item.getItemId()==R.id.create_item) {
-//            presenter.onCreateMenuPressed();
-//            return true;
-//        }
-//        return false;
-//    }
 
     @Override
     public void init() {
@@ -122,6 +115,27 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
                     }
                 });
         recyclerView.setAdapter(adapter);
+
+        ImageButton addButton = getActivity().findViewById(R.id.add_button);
+        ImageButton clearButton = getActivity().findViewById(R.id.clear_button);
+
+        addButton.setVisibility(View.VISIBLE);
+        clearButton.setVisibility(View.VISIBLE);
+
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onAddPressed();
+            }
+        });
+
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onClearPressed();
+            }
+        });
     }
 
     @Override
@@ -166,6 +180,6 @@ public class ChartsFragment extends MvpAppCompatFragment implements ChartsView {
 
     @Override
     public void setToolbarTitle(String title) {
-        ((MvpAppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
+        ((TextView) getActivity().findViewById(R.id.toolbar_title)).setText(title);
     }
 }

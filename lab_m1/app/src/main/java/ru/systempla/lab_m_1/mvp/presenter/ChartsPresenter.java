@@ -54,17 +54,17 @@ public class ChartsPresenter extends MvpPresenter<ChartsView> {
         }
 
 
+
+
     }
     public ChartsPresenter(Scheduler mainThreadScheduler, Scheduler ioThreadScheduler) {
         this.mainThreadScheduler = mainThreadScheduler;
         this.ioThreadScheduler = ioThreadScheduler;
         chartListPresenter = new ChartsListPresenter();
     }
-
     public IChartListPresenter getChartListPresenter() {
         return chartListPresenter;
     }
-
     @Override
     protected void onFirstViewAttach() {
         super.onFirstViewAttach();
@@ -101,5 +101,13 @@ public class ChartsPresenter extends MvpPresenter<ChartsView> {
 
     public void onDeleteMenuPressed(int position) {
         getViewState().showMessage("Delete pressed");
+    }
+
+    public void onAddPressed() {
+        getViewState().showMessage("Add pressed");
+    }
+
+    public void onClearPressed() {
+        getViewState().showMessage("Clear pressed");
     }
 }

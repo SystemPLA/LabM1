@@ -80,7 +80,9 @@ public class MainActivity extends MvpAppCompatActivity implements MainView, Bott
 
     @Override
     public void init() {
+        toolbar.setContentInsetsAbsolute(0, 0);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
         bottomNavigationView.getMenu().getItem(0).setChecked(true);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
     }
