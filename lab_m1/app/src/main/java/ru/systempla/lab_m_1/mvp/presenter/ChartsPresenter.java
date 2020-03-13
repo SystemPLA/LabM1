@@ -10,6 +10,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.subjects.PublishSubject;
 import moxy.InjectViewState;
 import moxy.MvpPresenter;
+import ru.systempla.lab_m_1.Constants;
 import ru.systempla.lab_m_1.mvp.model.entity.DataItem;
 import ru.systempla.lab_m_1.mvp.model.repo.ILabMRepo;
 import ru.systempla.lab_m_1.mvp.view.ChartsView;
@@ -53,9 +54,6 @@ public class ChartsPresenter extends MvpPresenter<ChartsView> {
             return chartBlocks.size();
         }
 
-
-
-
     }
     public ChartsPresenter(Scheduler mainThreadScheduler, Scheduler ioThreadScheduler) {
         this.mainThreadScheduler = mainThreadScheduler;
@@ -76,7 +74,7 @@ public class ChartsPresenter extends MvpPresenter<ChartsView> {
     }
 
     public void setTitle() {
-        getViewState().setToolbarTitle("Charts");
+        getViewState().setToolbarTitle(Constants.CHARTS);
     }
 
     public void loadChartsData() {
@@ -90,24 +88,24 @@ public class ChartsPresenter extends MvpPresenter<ChartsView> {
                     getViewState().updateList();
                     getViewState().hideLoading();
                 }, t -> {
-                    getViewState().showMessage("Ошибка загрузки данных");
+                    getViewState().showMessage(Constants.LOADING_ERROR);
                     getViewState().hideLoading();
                 });
     }
 
     public void onChangeMenuPressed(int position) {
-        getViewState().showMessage("Edit pressed");
+        getViewState().showMessage(Constants.PRESSED_EDIT);
     }
 
     public void onDeleteMenuPressed(int position) {
-        getViewState().showMessage("Delete pressed");
+        getViewState().showMessage(Constants.PRESSED_DELETE);
     }
 
     public void onAddPressed() {
-        getViewState().showMessage("Add pressed");
+        getViewState().showMessage(Constants.PRESSED_ADD);
     }
 
     public void onClearPressed() {
-        getViewState().showMessage("Clear pressed");
+        getViewState().showMessage(Constants.PRESSED_CLEAR);
     }
 }

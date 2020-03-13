@@ -2,4 +2,31 @@
 <resources>
     <dimen name="bottom_icon_size">35dp</dimen>
     <dimen name="bottom_menu_height">56dp</dimen>
+    <dimen name="toolbar_title_text_size">20sp</dimen>
+    <dimen name="toolbar_button_width">50sp</dimen>
+    <dimen name="add_button_end_margin">0dp</dimen>
+    <dimen name="clear_button_start_margin">0dp</dimen>
+    <dimen name="text_block_chart_item_height">72dp</dimen>
+    <dimen name="button_block_chart_item_height">72dp</dimen>
+    <dimen name="swipe_menu_padding">10dp</dimen>
+    <dimen name="edit_swipe_button_width">40dp</dimen>
+    <dimen name="delete_swipe_button_width">40dp</dimen>
+    <dimen name="edit_image_width">30dp</dimen>
+    <dimen name="edit_image_height">30dp</dimen>
+    <dimen name="delete_image_width">30dp</dimen>
+    <dimen name="delete_image_height">30dp</dimen>
+    <dimen name="double_row_text_top_margin">16dp</dimen>
+    <dimen name="double_row_text_middle_margin">4dp</dimen>
+    <dimen name="double_row_text_bottom_margin">16dp</dimen>
+    <dimen name="chart_item_text_size">13sp</dimen>
+    <dimen name="divider_width">1dp</dimen>
+    <dimen name="divider_top_margin">8dp</dimen>
+    <dimen name="divider_bottom_margin">8dp</dimen>
+    <dimen name="divider_height">0dp</dimen>
+    <dimen name="chart_titles_text_size">12sp</dimen>
+    <dimen name="double_row_title_top_margin">14dp</dimen>
+    <dimen name="double_row_title_middle_margin">4dp</dimen>
+    <dimen name="chart_title_top_margin">21dp</dimen>
+    <dimen name="rv_top_margin">14dp</dimen>
+    <dimen name="title_divider_height">12dp</dimen>
 </resources>

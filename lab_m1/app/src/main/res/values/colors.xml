@@ -16,4 +16,6 @@
 
     <color name="colorNegativeValue">#FFBD0D0D</color>
     <color name="colorPositiveValue">#FF2F7E04</color>
+    <color name="colorSwipeSideMenu">#d65819</color>
+    <color name="colorProgressBarBackground">#66000000</color>
 </resources>

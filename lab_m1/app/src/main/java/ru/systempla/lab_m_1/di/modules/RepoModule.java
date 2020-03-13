@@ -13,7 +13,7 @@ public class RepoModule {
 
     @Singleton
     @Provides
-    public ILabMRepo talosRepo(IDataSource api) {
+    public ILabMRepo labMRepo(IDataSource api) {
         return new LabMRepo(api);
     }
 }

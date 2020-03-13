@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jakewharton.rxbinding2.view.RxView;
-
 import butterknife.BindColor;
 import butterknife.BindString;
 import butterknife.BindView;

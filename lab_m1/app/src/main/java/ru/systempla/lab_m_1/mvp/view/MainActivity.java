@@ -1,11 +1,10 @@
 package ru.systempla.lab_m_1.mvp.view;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -13,13 +12,11 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 import moxy.MvpAppCompatActivity;
 import moxy.presenter.InjectPresenter;
 import moxy.presenter.ProvidePresenter;
-import moxy.viewstate.MvpViewState;
 import ru.systempla.lab_m_1.App;
+import ru.systempla.lab_m_1.Constants;
 import ru.systempla.lab_m_1.R;
 import ru.systempla.lab_m_1.mvp.presenter.MainActivityPresenter;
 import ru.systempla.lab_m_1.navigation.Screens;
@@ -82,7 +79,7 @@ public class MainActivity extends MvpAppCompatActivity implements MainView, Bott
     public void init() {
         toolbar.setContentInsetsAbsolute(0, 0);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
+        getSupportActionBar().setTitle(Constants.EMPTY);
         bottomNavigationView.getMenu().getItem(0).setChecked(true);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
     }

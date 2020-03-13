@@ -18,7 +18,7 @@
         <LinearLayout
             android:id="@+id/rowFG"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="@dimen/text_block_chart_item_height"
             android:background="@android:color/white"
             android:clickable="true"
             android:elevation="4dp"
@@ -36,32 +36,30 @@
                     android:id="@+id/item_pair_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/double_row_text_top_margin"
                     android:textColor="@color/colorTextMain"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/divider1"
-                    app:layout_constraintTop_toTopOf="parent"
-                    card_view:text="BTC USD" />
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
                     android:id="@+id/item_exchange_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="@dimen/double_row_text_middle_margin"
+                    android:layout_marginBottom="@dimen/double_row_text_bottom_margin"
                     android:textColor="@color/colorTextMain"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/divider1"
-                    app:layout_constraintTop_toBottomOf="@+id/item_pair_value"
-                    card_view:text="Binance" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_pair_value"/>
 
                 <View
                     android:id="@+id/divider1"
-                    android:layout_width="1dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="@dimen/divider_width"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginTop="@dimen/divider_top_margin"
+                    android:layout_marginBottom="@dimen/divider_bottom_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -74,19 +72,18 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextMain"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/chart_item_text_size"
                     app:layout_constraintStart_toEndOf="@+id/divider1"
                     app:layout_constraintEnd_toStartOf="@+id/divider2"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    card_view:text="7124.45" />
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <View
                     android:id="@+id/divider2"
-                    android:layout_width="1dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="@dimen/divider_width"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginTop="@dimen/divider_top_margin"
+                    android:layout_marginBottom="@dimen/divider_bottom_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/divider1"
@@ -97,36 +94,34 @@
                     android:id="@+id/item_1d_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/double_row_text_top_margin"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextMain"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/chart_item_text_size"
                     app:layout_constraintStart_toEndOf="@+id/divider2"
                     app:layout_constraintEnd_toStartOf="@+id/divider3"
-                    app:layout_constraintTop_toTopOf="parent"
-                    card_view:text="123.45" />
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
                     android:id="@+id/item_1d_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="@dimen/double_row_text_middle_margin"
+                    android:layout_marginBottom="@dimen/double_row_text_bottom_margin"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextMain"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/chart_item_text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/divider2"
                     app:layout_constraintEnd_toStartOf="@+id/divider3"
-                    app:layout_constraintTop_toBottomOf="@+id/item_1d_value"
-                    card_view:text="3.14%" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_1d_value"/>
 
                 <View
                     android:id="@+id/divider3"
-                    android:layout_width="1dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="@dimen/divider_width"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginTop="@dimen/divider_top_margin"
+                    android:layout_marginBottom="@dimen/divider_bottom_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/divider2"
@@ -137,36 +132,34 @@
                     android:id="@+id/item_7d_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/double_row_text_top_margin"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextMain"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/chart_item_text_size"
                     app:layout_constraintStart_toEndOf="@+id/divider3"
                     app:layout_constraintEnd_toStartOf="@+id/divider4"
-                    app:layout_constraintTop_toTopOf="parent"
-                    card_view:text="-321.01" />
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
                     android:id="@+id/item_7d_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="@dimen/double_row_text_middle_margin"
+                    android:layout_marginBottom="@dimen/double_row_text_bottom_margin"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextMain"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/chart_item_text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/divider3"
                     app:layout_constraintEnd_toStartOf="@+id/divider4"
-                    app:layout_constraintTop_toBottomOf="@+id/item_7d_value"
-                    card_view:text="-8.56%" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_7d_value"/>
 
                 <View
                     android:id="@+id/divider4"
-                    android:layout_width="1dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_width="@dimen/divider_width"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginTop="@dimen/divider_top_margin"
+                    android:layout_marginBottom="@dimen/divider_bottom_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/divider3"
@@ -177,29 +170,27 @@
                     android:id="@+id/item_30d_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/double_row_text_top_margin"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextMain"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/chart_item_text_size"
                     app:layout_constraintStart_toEndOf="@+id/divider4"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    card_view:text="1234.45" />
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
                     android:id="@+id/item_30d_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="@dimen/double_row_text_middle_margin"
+                    android:layout_marginBottom="@dimen/double_row_text_bottom_margin"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextMain"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/chart_item_text_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/divider4"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_30d_value"
-                    card_view:text="14.56%" />
+                    app:layout_constraintTop_toBottomOf="@+id/item_30d_value"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -208,16 +199,16 @@
         <LinearLayout
             android:id="@+id/rowBG"
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
+            android:layout_height="@dimen/button_block_chart_item_height"
             android:layout_alignParentRight="true"
             android:gravity="right"
-            android:padding="10dp"
-            android:background="#d65819"
+            android:padding="@dimen/swipe_menu_padding"
+            android:background="@color/colorSwipeSideMenu"
             android:orientation="horizontal">
 
             <RelativeLayout
                 android:id="@+id/edit_task"
-                android:layout_width="40dp"
+                android:layout_width="@dimen/edit_swipe_button_width"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -232,8 +223,8 @@
 
                     <ImageView
                         android:id="@+id/img_edit"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="@dimen/edit_image_width"
+                        android:layout_height="@dimen/edit_image_height"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_edit_black_24dp"
                         android:tint="@android:color/white"/>
@@ -242,7 +233,7 @@
 
             <RelativeLayout
                 android:id="@+id/delete_task"
-                android:layout_width="40dp"
+                android:layout_width="@dimen/delete_swipe_button_width"
                 android:layout_height="match_parent"
                 android:clickable="true"
                 android:focusable="true"
@@ -257,8 +248,8 @@
 
                     <ImageView
                         android:id="@+id/img_delete"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="@dimen/delete_image_width"
+                        android:layout_height="@dimen/delete_image_height"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_delete"
                         android:tint="@android:color/white"/>
